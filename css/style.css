@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper {
-  padding: 1.5em;
+  padding: 1em;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -140,15 +140,19 @@ img {
   height: 100%;
 }
 
-.thisweek {
-  display: block;
-  margin-top: 1em;
-  border-top: 5px dotted #bb043a;
-  border-bottom: 5px dotted #bb043a;
+.this-week {
+  margin-top: 0;
+  padding: 1em;
+  border: 5px dashed #9a123b;
+  position: relative;
+  animation-name: content;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
-.thisweek > h2 {
+.this-week > h2 {
   margin: 0;
+  background-color: #9a123b;
 }
 
 .prize-box {
@@ -159,6 +163,17 @@ img {
 .rule-box {
   border: 2px solid #bb043a;
   box-shadow: 10px 10px #bb043a;
+}
+
+@keyframes content {
+  0% {
+    top: -1000px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 #rnr-box {
@@ -178,7 +193,7 @@ img {
     font-size: 18px;
   }
   .wrapper {
-    padding: 2em 3em;
+    padding: 1.5em 3em;
   }
   .grid {
     grid-template-columns: auto auto auto auto;
